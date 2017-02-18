@@ -18,6 +18,10 @@ class CategoryController extends AppController
     public function actionView($id)
     {
         $id = Yii::$app->request->get('id');
+        $category = Category::findOne($id);
+        if(empty($category)) {
+            throw new \yii\web\HttpException(404, 'This category NOT FOUND');
+        }
         //$products = Product::find()->where(['category_id' => $id])->all();
         $query = Product::find()->where(['category_id' => $id]);
         $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 6, 'forcePageParam' => false, 'pageSizeParam' => false]);
