@@ -7,6 +7,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
+    'defaultRoute' => 'category/index',
     'components' => [
         'request' => [
             'cookieValidationKey' => '6d3bc0d7902eea2d247310507b6f72ef',
