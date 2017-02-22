@@ -1667,6 +1667,9 @@ h2.title {
   
 }
 
+.del_item {
+  cursor: pointer;
+}
 
 .cart_delete  {
   display: block;
