@@ -105,6 +105,7 @@ use yii\helpers\Html;
             <p><b>Availability:</b> In Stock</p>
             <p><b>Condition:</b> New</p>
             <p><b>Brand:</b> <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $product->category->id]) ?>"><?= $product->category->name?></a></p>
+            <p><?= $product->content ?></p>
             <a href=""><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
         </div><!--/product-information-->
     </div>
